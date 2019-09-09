@@ -9,7 +9,6 @@ import json
 import sqlite3
 import pandas as pd
 
-# PHASE 1: Parse JSON output and store it in a dictionary
 print("*" * 50)
 print("\t\t      PHASE 1")
 print("*" * 50)
@@ -34,6 +33,8 @@ print("--------------------------")
 print(json.dumps(my_dict, indent=2))
 print()
 
+
+
 print("*" * 50)
 print("\t\t      PHASE 2")
 print("*" * 50)
@@ -49,6 +50,8 @@ print("List of values")
 print("--------------")
 print(l)
 print()
+
+
 
 print("*" * 50)
 print("\t\t      PHASE 3")
@@ -74,6 +77,8 @@ print(pd.read_sql_query("SELECT * FROM Giants", conn))
 print()
 print("print query successful")
 
+
+
 print("*" * 50)
 print("\t\t      PHASE 4")
 print("*" * 50)
@@ -91,6 +96,8 @@ print("Printing val from one of the dictionary objects")
 print("-----------------------------------------------")
 print(data[0]["name"]) # accessing dictionary value with the following syntax
 print()
+
+
 
 print("*" * 50)
 print("\t\t      PHASE 5")
@@ -119,7 +126,6 @@ print("****************")
 print(pd.read_sql_query("SELECT * FROM Giants", conn))
 print()
 print("print query successful")
-
 
 
 
