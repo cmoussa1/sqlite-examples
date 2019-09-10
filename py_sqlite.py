@@ -126,18 +126,3 @@ print("****************")
 print(pd.read_sql_query("SELECT * FROM Giants", conn))
 print()
 print("print query successful")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

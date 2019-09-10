@@ -12,5 +12,33 @@
 		"jersey_number": 19,
 		"primary_position": "2B",
 		"ops": 0.861
+	},
+	{
+		"playerid": "dickerson8",
+		"name": "Alex Dickerson",
+		"jersey_number": 8,
+		"primary_position": "LF",
+		"ops": 0.876
+	},
+	{
+		"playerid": "crawford35",
+		"name": "Brandon Crawford",
+		"jersey_number": 35,
+		"primary_position": "SS",
+		"ops": 0.656
+	},
+	{
+		"playerid": "slater53",
+		"name": "Austin Slater",
+		"jersey_number": 53,
+		"primary_position": "RF",
+		"ops": 0.862
+	},
+	{
+		"playerid": "davis49",
+		"name": "Jaylin Davis",
+		"jersey_number": 49,
+		"primary_position": "RF",
+		"ops": 0.452
 	}
 ]
