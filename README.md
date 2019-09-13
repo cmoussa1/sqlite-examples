@@ -1,6 +1,7 @@
 # sqlite-examples
 Examples of using Python API with SQLite 
 
+`parse_to_db_NESTED.py` is able to parse JSON objects of different format, whether it starts with a `[` or `{`, as well as nested JSON objects.  
 
 ## parse_to_db.py
 #### Description

@@ -13,6 +13,7 @@ def parse_to_db(f, table):
 
 	l = []
 
+	# Val
 	if (type(data) == dict):
 		for key, val in data.items():
 			# print(type(val))
