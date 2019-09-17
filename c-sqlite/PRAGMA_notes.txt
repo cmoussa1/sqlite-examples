@@ -1,0 +1,98 @@
+PRAGMA Notes
+
+SQLite PRAGMA command is a special command to be used to control various
+environmental variables and state flags within the SQLite environment. A
+PRAGMA value can be read and it can also be set based on the requirements.
+
+----------
+
+SYNTAX
+
+To query the current PRAGMA value, just provide the name of the pragma:
+
+  PRAGMA pragma_name;
+
+To set a new value for PRAGMA, use the following syntax:
+
+  PRAGMA pragma_name = value;
+
+----------
+
+auto_vacuum PRAGMA
+  gets or sets the auto-vacuum mode. Example syntax:
+
+    PRAGMA [database].auto_vacuum;
+    PRAGMA [database].auto_vacuum = mode;
+
+  where mode can be any of the following:
+    0: auto-vacuum is disabled. The database file will never shrink in size
+    unless it is manually vacuumed.
+
+    1: allows a database to shrink as data is removed from the DB.
+
+    2: auto-vacuum is enabled but must be manually activated.
+
+cache_size PRAGMA
+  can get or temporarily set the maximum size of the in-memory page cache.
+  Example syntax:
+
+    PRAGMA [database].cache_size;
+    PRAGMA [database].cache_size = pages;
+
+  'pages' represents the number of pages in the cache. The built-in page cache
+  has a default size of 2,000 pages and a minimum size of 10 pages.
+
+journal_mode PRAGMA
+  (background: a journal file is a temporary database that stores the most
+  recent state of the database. DB-JOURNAL files are used to restore a database
+  in case the application using the database crashes while executing a
+  transaction.)
+
+  gets or sets the journal mode which controls how the journal file is stored
+  and processed. Example syntax:
+
+    PRAGMA journal_mode;
+    PRAGMA journal_mode = mode;
+    PRAGMA [database].journal_mode;
+    PRAGMA [database].journal_mode = mode;
+
+  where mode can be any of the following:
+    DELETE: default mode. At the conclusion of a transaction, the journal file
+    is deleted.
+
+    TRUNCATE: journal file is truncated to a length of zero bytes.
+
+    PERSIST: journal file is left in place, but the header is overwritten
+    to indicate the journal is no longer valid.
+
+    MEMORY: journal record is held in memory, rather than on disk.
+
+    OFF: no journal record is kept.
+
+synchronous PRAGMA
+  controls how aggressively SQLite will write data all the way out to physical
+  storage. Example syntax:
+
+    PRAGMA [database].synchronous;
+    PRAGMA [database].synchronous = mode;
+
+  where mode can be any of the following:
+    0: No syncs at all.
+
+    1: Sync after each sequence of critical disk operations
+
+    2: Sync after each critical disk operation
+
+locking_mode PRAGMA
+  sets or queries the database connection locking-mode. Example syntax:
+
+    PRAGMA [database].locking_mode;
+    PRAGMA [database].locking_mode = mode;
+
+  where mode can be either of the following:
+    NORMAL: the database connection unlocks the database file at the conclusion
+    of each read or write transaction.
+
+    EXCLUSIVE: the database connection never releases file-locks; the first time
+    the database is read in EXCLUSIVE mode or written, a shared lock is obtained
+    and held.
