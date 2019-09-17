@@ -1,0 +1,13 @@
+[
+	{
+		"playerid": "santana41",
+		"name": "Carlos Santana",
+		"jersey_number": 41,
+		"primary_position": "1B",
+		"slashline" : [
+			{"ba" : 0.283},
+			{"obp" : 0.402},
+			{"ops" : 0.938}
+		]
+	}
+]
