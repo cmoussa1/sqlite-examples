@@ -41,6 +41,16 @@
   If any queries remain that have not been finalized, sqlite3_close() will
   return SQLITE_BUSY with the error message "Unable to close due to unfinalized
   statements"
+
+  ----------
+
+  sqlite3_prepare_v2(
+    sqlite3 *db,            Database handle
+    const char *zSql,       SQL statement, UTF-8 encoded
+    int nByte,              Max length of zSql in bytes
+    sqlite3_stmt **ppStmt,  OUT: Statement handle
+    const char **pzTail     OUT: Pointer to unused portion of zSql
+  );
 */
 
 #include <stdio.h>
